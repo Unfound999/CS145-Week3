@@ -1,3 +1,9 @@
+// Authors: Christopher Waschke, Jackson Jenks, Brody Weinkauf
+// Assignment: Week 3 - Thinking of Object
+// Description: A class and manager for a shape, based upon it's points on a grid. Manager should be able to find length, width, area and parameter. Test class to validate methods.
+// Citation: https://www.w3schools.com/java/java_regex.asp
+
+
 package src;
 
 import java.util.regex.Pattern;
