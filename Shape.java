@@ -44,7 +44,6 @@ class Shape {
     public void setBottomRight(double[] bottomRight) {
         this.bottomRight = bottomRight;
     } //  ends setBottomRight method
-
 } //  ends Shape class
 
 class ShapeManager {
