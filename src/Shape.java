@@ -19,7 +19,7 @@ class ShapeManager {
 
 class ShapeTest {
 
-    /* doube[][] method. Returns a 2d array, row size of count, of ordered pairs doubles. (Equivent to two columns).
+    /* double[][] method. Returns a 2d array, row size of count, of ordered pairs doubles. (Equivalent to two columns).
      * We redo the user input portion if the regex fails to match to an index of the count we're looking for.
      * Parameters:
      *  count (int) The number of ordered pairs we're searching for.
@@ -59,7 +59,7 @@ class ShapeTest {
     /*
      * Our Main method for our tests.
      * Gets the user's input of ordered pairs, then creates a shape using those points.
-     * Tests the logical fuction of Manager for finding area/parameter/length/width.
+     * Tests the logical function of Manager for finding area/parameter/length/width.
      */
     public static void main(String[] args) {
         double[][] pointArr = getPoints(4);
