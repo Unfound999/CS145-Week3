@@ -1,8 +1,5 @@
 package src;
 
-import java.awt.image.SampleModel;
-import java.lang.reflect.Parameter;
-
 class Shape {
 
 }
@@ -15,98 +12,50 @@ class ShapeManager {
 
     private Shape myShape;
 
-    ShapeManager(double[] topLeft, double[] topRight, double[] bottomLeft, double[] bottomRight) {
+    public ShapeManager(double[] topLeft, double[] topRight, double[] bottomLeft, double[] bottomRight) {
 
         this.myShape = new Shape(topLeft, topRight, bottomLeft, bottomRight);
     }
 
-    public double grabArea(double[] topLeft, double[] topRight, double[] bottomLeft, double[] bottomRight) {
+    public double grabArea() {
 
-        double length = grabLengthRectangle(topLeft, bottomLeft)(topLeft, bottomLeft);
-        double width = grabWidthRectangle(bottomLeft, bottomRight)(bottomLeft, bottomRight);
+        double length = this.grabLengthRectangle();
+        double width = this.grabWidthRectangle();
 
         double area = length * width;
 
         return area;
     }
 
-    public double grabPerameter(double[] topLeft, double[] topRight, double[] bottomLeft, double[] bottomRight) {
+    public double grabPerameter() {
 
-        double length = grabLengthRectangle(topLeft, bottomLeft)(topLeft, bottomLeft);
-        double width = grabWidthRectangle(bottomLeft, bottomRight)(bottomLeft, bottomRight);
+        double length = this.grabLengthRectangle();
+        double width = this.grabWidthRectangle();
 
         double parameter = length * 2 + width * 2;
 
         return parameter;
     }
 
-    public double grabLengthRectangle(double[] topLeft, double[] bottomLeft) {
+    public double grabLengthRectangle() {
 
-        topLeft[1] = this.getTopLeft();
-        bottomLeft[1] = this.getBottomLeft();
+        double[] topLeft = this.myShape.getTopLeft();
+        double[] bottomLeft = this.myShape.getBottomLeft();
 
         double length = topLeft[1] - bottomLeft[1];
 
         return length;
     }
 
-    public double grabWidthRectangle(double[] bottomLeft, double[] bottomRight) {
+    public double grabWidthRectangle() {
 
-        bottomRight[0] = this.getTopLeft();
-        bottomLeft[0] = this.getBottomLeft();
+        double[] bottomRight = this.myShape.getBottomRight();
+        double[] bottomLeft = this.myShape.getBottomLeft();
 
-        double width = topLeft[1] - bottomLeft[1];
+        double width = bottomRight[0] - bottomLeft[0];
 
         return width;
     }
-
-    public double grabAreaTriangle(double[] bottomLeft, double[] bottomRight) {
-
-        double height = this.getTriangleHeight(); //Side a is the left side of the triangle
-        double base = this.getTriangleSideB(); //Side b is the base of the triangle
-
-        double area = .5 * base[0] * height[1];
-
-        return area;
-    }
-
-    public double grabParameterTriangle(double[] bottomLeft, double[] bottomRight) {
-
-        double sideA = this.getTrianlgeSideA(); //Side a is the left side of the triangle
-        double base = this.getTrianlgeSideB(); //Side b is the base of the triangle
-        double sideC = this.getTrianlgeSideC(); //Side c is the right side of the triangle
-
-        double parameter = sideA + base[0] + sideC;
-
-        return parameter;
-    }
-
-    public double grabCircumferenceCircle(double[] bottomLeft, double[] bottomRight) {
-
-        double radius = this.radius();
-
-        double area = 3.14159265359 * 2 * radius;
-
-        return area;
-    }
-
-    public double grabAreaCircle(double[] bottomLeft, double[] bottomRight) {
-
-        double radius = this.radius();
-
-        double area = (3.14159265359 * radius) * (3.14159265359 * radius);
-
-        return area;
-    }
-
-
-
-    public void calcualteArea() {
-
-        
-
-    }
-    
 
 }
 
