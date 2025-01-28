@@ -13,21 +13,11 @@ class Shape {
         this.bottomRight = bottomRight;
     } //  ends Shape object constructor method
 
-    public double[] getTopLeft() {
-        return topLeft;
-    } //  ends getTopLeft method
-
-    public double[] getBottomLeft() {
-        return bottomLeft;
-    } //  ends getBottomLeft method
-
-    public double[] getTopRight() {
-        return topRight;
-    } //  ends getTopRight method
-
-    public double[] getBottomRight() {
-        return bottomRight;
-    } //  ends getBottomRight method
+    //  returns called values from Shape object
+    public double[] getTopLeft() {return topLeft;}
+    public double[] getBottomLeft() {return bottomLeft;}
+    public double[] getTopRight() {return topRight;}
+    public double[] getBottomRight() {return bottomRight;}
 
     public void setTopLeft(double[] topLeft) {
         this.topLeft = topLeft;
