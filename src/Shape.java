@@ -19,27 +19,17 @@ class Shape {
         this.bottomRight = bottomRight;
     } //  ends Shape object constructor method
 
-    //  returns called values from Shape object
+    //  methods return called values from Shape object
     public double[] getTopLeft() {return topLeft;}
     public double[] getBottomLeft() {return bottomLeft;}
     public double[] getTopRight() {return topRight;}
     public double[] getBottomRight() {return bottomRight;}
 
-    public void setTopLeft(double[] topLeft) {
-        this.topLeft = topLeft;
-    } //  ends setTopLeft method
-
-    public void setBottomLeft(double[] bottomLeft) {
-        this.bottomLeft = bottomLeft;
-    } //  ends setBottomLeft method
-
-    public void setTopRight(double[] topRight) {
-        this.topRight = topRight;
-    } //  ends setTopRight method
-
-    public void setBottomRight(double[] bottomRight) {
-        this.bottomRight = bottomRight;
-    } //  ends setBottomRight method
+    //  methods set values in Shape object to the passed values
+    public void setTopLeft(double[] topLeft) {this.topLeft = topLeft;}
+    public void setBottomLeft(double[] bottomLeft) {this.bottomLeft = bottomLeft;}
+    public void setTopRight(double[] topRight) {this.topRight = topRight;}
+    public void setBottomRight(double[] bottomRight) {this.bottomRight = bottomRight;}
 } //  ends Shape class
 
 class ShapeManager {
