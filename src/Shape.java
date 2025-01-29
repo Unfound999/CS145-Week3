@@ -57,6 +57,14 @@ class ShapeManager {
         return width;
     }
 
+    public ShapeType grabShapeType(){
+        if(this.grabLengthRectangle() == this.grabWidthRectangle()){
+            return ShapeType.SQUARE;
+        } else {
+            return ShapeType.RECTANGLE;
+        }
+    }
+
 }
 
 class ShapeTest {
