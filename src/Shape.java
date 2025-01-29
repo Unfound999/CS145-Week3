@@ -5,10 +5,6 @@ class Shape {
 }
 
 class ShapeManager {
-/* ToDo List: non static Methods that are needed are double calculateArea, double calculatePerameter, double calculateLength, double calculateHeight. There should
- * be a property of a shape that holds information about shape (Initialized in the constructor) CREATE METHOD that calculates distance between points and then
- * use that to calcualte area and perameter in other methods
- */
 
     //Create the data for myShape
     private Shape myShape;
