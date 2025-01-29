@@ -154,6 +154,7 @@ class ShapeTest {
     public static void main(String[] args) {
 
         System.out.println("Please give us the four points to create a rectangle.");
+        System.out.println("Please enter it in the following order: Top Left, Top Right, Bottom Left, Bottom Right");
         double[][] pointArr = getPoints(4);
 
         ShapeManager shapeManager = new ShapeManager(pointArr[0], pointArr[1], pointArr[2], pointArr[3]);
