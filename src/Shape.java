@@ -1,6 +1,6 @@
 // Authors: Christopher Waschke, Jackson Jenks, Brody Weinkauf
 // Assignment: Week 3 - Thinking of Object
-// Description: A class and manager for a shape, based upon it's points on a grid. Manager should be able to find length, width, area and parameter. Test class to validate methods.
+// Description: A class and manager for a shape, based upon it's points on a grid. Manager should be able to find length, width, area and perimeter. Test class to validate methods.
 // Citation: https://www.w3schools.com/java/java_regex.asp
 
 package src;
@@ -64,18 +64,18 @@ class ShapeManager {
         return area;
     }
 
-    //Method that calculates the parameter of the rectangle, returns the parameter, and pulls in length and width from methods in this class
-    public double grabPerameter() {
+    //Method that calculates the perimeter of the rectangle, returns the perimeter, and pulls in length and width from methods in this class
+    public double grabPerimeter() {
 
         double length = this.grabLengthRectangle();
         double width = this.grabWidthRectangle();
 
-        double parameter = length * 2 + width * 2;
+        double perimeter = length * 2 + width * 2;
 
-        return parameter;
+        return perimeter;
     }
 
-    //Method that retunrs the lengths and grabs in coordinates from the myShape object
+    //Method that returns the lengths and grabs in coordinates from the myShape object
     public double grabLengthRectangle() {
 
         double[] topLeft = this.myShape.getTopLeft();
@@ -86,7 +86,7 @@ class ShapeManager {
         return length;
     }
 
-    //Method that retunrs the lengths and grabs in coordinates from the myShape object
+    //Method that returns the lengths and grabs in coordinates from the myShape object
     public double grabWidthRectangle() {
 
         double[] bottomRight = this.myShape.getBottomRight();
@@ -149,14 +149,16 @@ class ShapeTest {
     /*
      * Our Main method for our tests.
      * Gets the user's input of ordered pairs, then creates a shape using those points.
-     * Tests the logical function of Manager for finding area/parameter/length/width.
+     * Tests the logical function of Manager for finding area/perimeter/length/width.
      */
     public static void main(String[] args) {
+
+        System.out.println("Please give us the four points to create a rectangle.");
         double[][] pointArr = getPoints(4);
 
         ShapeManager shapeManager = new ShapeManager(pointArr[0], pointArr[1], pointArr[2], pointArr[3]);
-        System.out.printf("The area is %f, the parameter is %f, the length and width is %f, %f",
-                shapeManager.calcArea(), shapeManager.calcParameter(), shapeManager.calcLength(),
-                shapeManager.calcWidth());
+        System.out.printf("The area is %f, the perimeter is %f, the length and width is %f, %f and is type %s\n",
+                shapeManager.grabArea(), shapeManager.grabPerimeter(), shapeManager.grabLengthRectangle(),
+                shapeManager.grabWidthRectangle(), shapeManager.grabShapeType().name());
     }
 }
