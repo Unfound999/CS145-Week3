@@ -1,12 +1,13 @@
 package src;
 
+// Creates the Enum for our square type. 
+enum shapeType {
+    RECTANGLE,
+    SQUARE
+} //  ends enum
+
 class Shape {
 
-    //  initializes enum that determines type of shape
-    private enum shapeType {
-        RECTANGLE,
-        SQUARE
-    } //  ends enum
 
     //  initializes coordinates
     private double[] topLeft, topRight, bottomLeft, bottomRight;
