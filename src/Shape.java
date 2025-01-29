@@ -10,13 +10,16 @@ class ShapeManager {
  * use that to calcualte area and perameter in other methods
  */
 
+    //Create the data for myShape
     private Shape myShape;
 
+    //Constructor class created for pulling in shape data from data class
     public ShapeManager(double[] topLeft, double[] topRight, double[] bottomLeft, double[] bottomRight) {
 
         this.myShape = new Shape(topLeft, topRight, bottomLeft, bottomRight);
     }
 
+    //Method that returns the area of a rectangle and brings in length and width from methods in this class
     public double grabArea() {
 
         double length = this.grabLengthRectangle();
@@ -27,6 +30,7 @@ class ShapeManager {
         return area;
     }
 
+    //Method that calculates the parameter of the rectangle, returns the parameter, and pulls in length and width from methods in this class
     public double grabPerameter() {
 
         double length = this.grabLengthRectangle();
@@ -37,6 +41,7 @@ class ShapeManager {
         return parameter;
     }
 
+    //Method that retunrs the lengths and grabs in coordinates from the myShape object
     public double grabLengthRectangle() {
 
         double[] topLeft = this.myShape.getTopLeft();
@@ -47,6 +52,7 @@ class ShapeManager {
         return length;
     }
 
+    //Method that retunrs the lengths and grabs in coordinates from the myShape object
     public double grabWidthRectangle() {
 
         double[] bottomRight = this.myShape.getBottomRight();
