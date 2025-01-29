@@ -86,7 +86,7 @@ class ShapeManager {
         return length;
     }
 
-    //Method that retunrs the lengths and grabs in coordinates from the myShape object
+    //Method that returns the lengths and grabs in coordinates from the myShape object
     public double grabWidthRectangle() {
 
         double[] bottomRight = this.myShape.getBottomRight();
@@ -152,11 +152,13 @@ class ShapeTest {
      * Tests the logical function of Manager for finding area/parameter/length/width.
      */
     public static void main(String[] args) {
+
+        System.out.println("Please give us the four points to create a rectangle.");
         double[][] pointArr = getPoints(4);
 
         ShapeManager shapeManager = new ShapeManager(pointArr[0], pointArr[1], pointArr[2], pointArr[3]);
-        System.out.printf("The area is %f, the parameter is %f, the length and width is %f, %f",
-                shapeManager.calcArea(), shapeManager.calcParameter(), shapeManager.calcLength(),
-                shapeManager.calcWidth());
+        System.out.printf("The area is %f, the parameter is %f, the length and width is %f, %f and is type %s",
+                shapeManager.grabArea(), shapeManager.grabPerameter(), shapeManager.grabLengthRectangle(),
+                shapeManager.grabWidthRectangle(), shapeManager.grabShapeType().name());
     }
 }
