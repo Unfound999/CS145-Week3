@@ -1,0 +1,64 @@
+<!--
+-- Author: Christopher Waschke
+-- Description: Translated our Java code to JavaScript, to calculate a rectangle's area and perimeter.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Shapes - Javascript</title>
+</head>
+
+<body>
+    <main class="content">
+        <div class="shape-input-form">
+            <h2>Please give me your points for a shape.</h2>
+            <div class="points-inputs-box">
+                <div class="points-input" name="topleft">
+                    <div class="label">
+                        <p>Top Left</p>
+                    </div>
+                    <input class="input-point" type="text" id="topLeftX" placeholder="X coordinate" />
+                    <input class="input-point" type="text" id="topLeftY" placeholder="Y coordinate" />
+                </div>
+                <div class="points-input" name="topright">
+                    <div class="label">
+                        <p>Top Right</p>
+                    </div>
+                    <input class="input-point" type="text" id="topRightX" placeholder="X coordinate" />
+                    <input class="input-point" type="text" id="topRightY" placeholder="Y coordinate" />
+                </div>
+                <div class="points-input" name="bottomleft">
+                    <div class="label">
+                        <p>Bottom Left</p>
+                    </div>
+                    <input class="input-point" type="text" id="bottomLeftX" placeholder="X coordinate" />
+                    <input class="input-point" type="text" id="bottomLeftY" placeholder="Y coordinate" />
+                </div>
+                <div class="points-input" name="bottomright">
+                    <div class="label">
+                        <p>Bottom Right</p>
+                    </div>
+                    <input class="input-point" type="text" id="bottomRightX" placeholder="X coordinate" />
+                    <input class="input-point" type="text" id="bottomRightY" placeholder="Y coordinate" />
+                </div>
+            </div>
+            <div class="shape-input-btns">
+                <button class="btn" id="calculate" onclick="calculateRect()">Submit Shape</button>
+            </div>
+
+            <div id="shape-output" class="shape-output hidden">
+                <h2>Shape Output</h2>
+                <p id="output"></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
